@@ -16,7 +16,7 @@ echo "Setting up the network"
 ifconfig
 read -p  "Please choose an interface for the static network:(enp0s8) " networkInterface
 networkInterface=${networkInterface:-enp0s8}
-read -p  "Please provide the Ipv4 address for the interface:(192.168.56.101) " netInfAdd
+read -p  "Please provide the Ipv4 address for the interface:(192.168.56.102) " netInfAdd
 netInfAdd=${netInfAdd:-192.168.56.101}
 read -p  "Please provide the Ipv4 mask for the interface:(255.255.255.0) " netInfAddMask
 netInfAddMask=${netInfAddMask:-255.255.255.0}
