@@ -1,0 +1,112 @@
+ done installing epel
+ done installing nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)
+   Active: active (running) since Thu 2020-06-04 22:29:48 EDT; 28ms ago
+  Process: 2480 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)
+  Process: 2477 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)
+  Process: 2476 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)
+ Main PID: 2482 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─2482 nginx: master process /usr/sbin/ngin
+           └─2483 nginx: worker proces
+
+Jun 04 22:29:48 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 04 22:29:48 localhost.localdomain nginx[2477]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 04 22:29:48 localhost.localdomain nginx[2477]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 04 22:29:48 localhost.localdomain systemd[1]: Failed to parse PID from file /run/nginx.pid: Invalid argument
+Jun 04 22:29:48 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+ done installing epel
+ done installing nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Thu 2020-06-04 22:29:48 EDT; 2min 40s ago
+ Main PID: 2482 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─2482 nginx: master process /usr/sbin/ngin
+           └─2483 nginx: worker proces
+
+Jun 04 22:29:48 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 04 22:29:48 localhost.localdomain nginx[2477]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 04 22:29:48 localhost.localdomain nginx[2477]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 04 22:29:48 localhost.localdomain systemd[1]: Failed to parse PID from file /run/nginx.pid: Invalid argument
+Jun 04 22:29:48 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+ done installing epel
+ done installing nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Thu 2020-06-04 22:29:48 EDT; 3min 8s ago
+ Main PID: 2482 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─2482 nginx: master process /usr/sbin/ngin
+           └─2483 nginx: worker proces
+
+Jun 04 22:29:48 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 04 22:29:48 localhost.localdomain nginx[2477]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 04 22:29:48 localhost.localdomain nginx[2477]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 04 22:29:48 localhost.localdomain systemd[1]: Failed to parse PID from file /run/nginx.pid: Invalid argument
+Jun 04 22:29:48 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+ done installing epel
+ done installing nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Thu 2020-06-04 22:29:48 EDT; 6min ago
+ Main PID: 2482 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─2482 nginx: master process /usr/sbin/ngin
+           └─2483 nginx: worker proces
+
+Jun 04 22:29:48 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 04 22:29:48 localhost.localdomain nginx[2477]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 04 22:29:48 localhost.localdomain nginx[2477]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 04 22:29:48 localhost.localdomain systemd[1]: Failed to parse PID from file /run/nginx.pid: Invalid argument
+Jun 04 22:29:48 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+ done installing epel
+ done installing nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Thu 2020-06-04 22:55:14 EDT; 6min ago
+  Process: 1310 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)
+  Process: 1251 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)
+  Process: 1245 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)
+ Main PID: 1324 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─1324 nginx: master process /usr/sbin/ngin
+           └─1327 nginx: worker proces
+
+Jun 04 22:55:13 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 04 22:55:14 localhost.localdomain nginx[1251]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 04 22:55:14 localhost.localdomain nginx[1251]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 04 22:55:14 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+ done installing epel
+ done installing nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Thu 2020-06-04 22:55:14 EDT; 51min ago
+ Main PID: 1324 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─1324 nginx: master process /usr/sbin/ngin
+           └─1327 nginx: worker proces
+
+Jun 04 22:55:13 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 04 22:55:14 localhost.localdomain nginx[1251]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 04 22:55:14 localhost.localdomain nginx[1251]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 04 22:55:14 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+ done installing epel
+ done installing nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Mon 2020-06-08 09:52:16 EDT; 7h ago
+  Process: 1385 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)
+  Process: 1277 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)
+  Process: 1269 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)
+ Main PID: 1386 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─1386 nginx: master process /usr/sbin/ngin
+           └─1387 nginx: worker proces
+
+Jun 08 09:52:10 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 08 09:52:16 localhost.localdomain nginx[1277]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 08 09:52:16 localhost.localdomain nginx[1277]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 08 09:52:16 localhost.localdomain systemd[1]: Failed to parse PID from file /run/nginx.pid: Invalid argument
+Jun 08 09:52:16 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
