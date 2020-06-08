@@ -253,7 +253,142 @@ var server = app.listen(port, function () {
 
 ```
 
-and thats it for our nodejs coding, Now the UI!
+and thats it for our nodejs coding, 
+### Now the UI !
+#### as for the UI we will use Flutter to code, and build it as Html and JS for Web!
+##### Here I will explain only the important functions!
+we got only one page that handel's everything ''' MyHomePage '''
+all my classes are named with ``` Myxxxxx ```
 
+in the initState we will load the data from the database!
+```dart
+  void initState() {
+    super.initState();
+    MyColleactions.creatMeFromTheDataBase().then((value) {
+      MyColleactions.loadAllElementsForAllColleactions().then((value) {
+        setState(() {
+          isLoading = false;
+        });
+      });
+    });
+  }
+  ```
+  ##### PLease note that the class of MyColleactions handel's it's own actions with the database, so we got the CLASS and MyActions
+ ##### ``` MyActions is the one that handels all with the database ```  others will fetsh the data only.
+ 
+ so we got 
+``` dart 
+import 'dart:convert';
+
+import 'package:my_database/classes/Elements.dart';
+import 'package:my_database/database/Actions.dart';
+
+class MyColleactions {
+  String name;
+  List<MyElement> myElements = List<MyElement>();
+  MyColleactions(this.name);
+  static List<MyColleactions> listOfMe = List<MyColleactions>();
+
+  ///This will create the element
+  Future getMyElements() async {
+    var data = await MyActions.getElementForThisColleaction(this.name);
+    myElements = MyElement.buildMeFromListData(data);
+  }
+
+  ////This will handle inserting the data into the server
+  Future addingNewElementAndRefresh(String userInput) async { 
+    if (await MyActions.insertInto(name, json.decode(userInput) as Map))
+      await getMyElements();
+  }
+
+  ///This will handle  Loading the Collactions
+  static Future creatMeFromTheDataBase() async {
+    List data = await MyActions.getAllColactions();
+    data.forEach((element) {
+      listOfMe.add(MyColleactions(element["name"]));
+    });
+  }
+
+  ///This will get all elements for the colleaction
+  static Future loadAllElementsForAllColleactions() async {
+    List<Future> myLoaders = List<Future>();
+    listOfMe.forEach((element) {
+      myLoaders.add(element.getMyElements());
+    });
+    await Future.wait(myLoaders);
+  }
+}
+```
+and the class of Actions 
+```dart
+import 'dart:convert';
+
+import 'package:my_database/Util/APIs.dart';
+import 'package:http/http.dart' as http;
+
+class MyActions {
+  static const MyHeaders = {
+    "Accept": "application/json",
+    // "Content-Type": "application/x-www-from-urlencoded",
+    "Acess-Control-Allow-Origin": '*'
+  };
+
+  ///This will get all the colacions from the database
+  static Future<List> getAllColactions() async {
+    final res = await http.get(MyAPIs.GetAllCollections, headers: MyHeaders);
+    Map body = json.decode(res.body);
+    if (body['status'])
+      return body['Message'];
+    else
+      return List();
+  }
+
+  ///This will get all the colacions from the database
+  static Future<List> getElementForThisColleaction(
+      String thisColeaction) async {
+    final res = await http.post(MyAPIs.GetElementsForThisCollaction,
+        headers: MyHeaders, body: {"CollectionName": thisColeaction});
+    print(res.body);
+
+    Map body = json.decode(res.body);
+    if (body['status'])
+      return body['message'];
+    else
+      return List();
+  }
+
+  ////This will add the colleaction to the database
+  static Future<bool> addColleaction(String name) async {
+    final res = await http.post(MyAPIs.GetElementsForThisCollaction,
+        headers: MyHeaders, body: {"CollectionName": name});
+    print(res.body);
+
+    Map body = json.decode(res.body);
+    return body["status"];
+  }
+
+  static Future<bool> insertInto(String name, Map theData) async {
+    final res = await http.post(MyAPIs.InsertIntoCollaction,
+        headers: MyHeaders, body: {"CollectionName": name, "MyData": json.encode(theData)});
+    print(res.body);
+
+    Map body = json.decode(res.body);
+    return body["status"];
+  }
+}
+``` 
+and the APIs url are in ``` API.dart ```
+
+### Please when you change the address please dont forget to change the address of the server in the UI!!!!!!
+```dart
+class MyAPIs {
+  static const MyHostConnection = "http://192.168.56.102:2500";
+  static const GetAllCollections = MyHostConnection + "/Api/GetAllCollections";
+  static const GetElementsForThisCollaction =
+      MyHostConnection + "/Api/GetMyElement";
+  static const CreateCollaction = MyHostConnection + "/Api/CreateCollection";
+  static const InsertIntoCollaction =MyHostConnection + "/Api/InsertInto";
+}
+```
 
 
