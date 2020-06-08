@@ -1,7 +1,7 @@
 # Nginx-with-flutter-mongoDb-and-Npm
  This projects aims to explain how to create a web demo interface by using ```Flutter``` and creating rest Api with ```NodeJS```, with a ```CentOS``` server, that runs with ```nginx```, and a database ```MongoDB```.
  ### Please note that all the packages installaization is been take care of by using ```./setup.sh```
- ### and on the network please make sure its 192.168.56.102 or you will have to rebuild the Web interface and changing the host IP, cuze it's not been done dynamic !!!!
+ ### and on the network please make sure its 192.168.56.102 or you will have to rebuild the Web interface and changing the host IP, cuz it's not been done dynamic !!!!
  #### so lets explain how the setup will work!
  it will start by installing nginx:
  ```bash
@@ -381,6 +381,8 @@ class MyActions {
 and the APIs url are in ``` API.dart ```
 
 ### Please when you change the address please dont forget to change the address of the server in the UI!!!!!!
+### its by ``` flutter build web ```, but that after installing flutter it self on the machine
+### then copy it to ```/usr/share/nginx/html```
 ```dart
 class MyAPIs {
   static const MyHostConnection = "http://192.168.56.102:2500";
